@@ -57,6 +57,10 @@ predefinedStocks.forEach(async (stock) => {
     await Stock.create(stock);
 })
 
+app/get('/', (req,res) => {
+    res.json("Server");
+})
+
 //getall Stocks
 app.get('/getallstocks', async (req,res) => {
     const stocks = await Stock.find();
