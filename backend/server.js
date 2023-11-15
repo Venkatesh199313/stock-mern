@@ -57,7 +57,7 @@ predefinedStocks.forEach(async (stock) => {
     await Stock.create(stock);
 })
 
-app/get('/', (req,res) => {
+app.get('/', (req,res) => {
     res.json("Server");
 })
 
