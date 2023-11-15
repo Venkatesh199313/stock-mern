@@ -16,8 +16,8 @@ const App = () => {
   useEffect(() => {
     const fetchStocks = async () => {
       try {
-          // const response = await axios.get('http://localhost:5400/getallstocks');
-        const response = await axios.get('https://stock-mern-backend.vercel.app/getallstocks')
+          const response = await axios.get('http://localhost:5400/getallstocks');
+        // const response = await axios.get('https://stock-mern-backend.vercel.app/getallstocks')
           setAllStocks(response.data);
           console.log('setStockprice', allStocks);
       }catch(err) {
