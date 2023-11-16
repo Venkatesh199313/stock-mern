@@ -9,14 +9,14 @@ const {Schema} = mongoose; // we can take like this
 const port = 5400;
 // middleware function
 app.use(express.json());
-app.use(cors({
-    origin : ["https://stock-mern-backend.vercel.app"],
-    methods : ['POST', 'GET'],
-    credentials :  true
-}));
 // app.use(cors({
-//     origin : "*"
-// }))
+//     origin : ["https://stock-mern-backend.vercel.app"],
+//     methods : ['POST', 'GET'],
+//     credentials :  true
+// }));
+app.use(cors({
+    origin : "*"
+}))
 
 mongoose.connect("mongodb+srv://MiniStockPriceTracker:Ganesh13@cluster0.6cccu1g.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser : true,
